@@ -55,6 +55,10 @@ jobs:
         working-directory: source/opc/frontend
         run: npm ci
 
+      - name: Audit public frontend lockfile
+        working-directory: source/opc/frontend
+        run: npm audit --package-lock-only --ignore-scripts
+
       - name: Typecheck frontend
         working-directory: source/opc/frontend
         run: npm run typecheck

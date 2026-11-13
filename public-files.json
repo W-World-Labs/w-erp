@@ -9,8 +9,8 @@
     },
     {
       "path": ".github/workflows/ci.yml",
-      "bytes": 2572,
-      "sha256": "c885226ff2bb6835734bc0784d8b7286819e647476917820219c28b84ad2bd4b"
+      "bytes": 2725,
+      "sha256": "d27fdc2130d93316a40c0dba32bc7705fdb285f3d8ce2db613bfb4786e5f821b"
     },
     {
       "path": ".gitignore",
@@ -1349,13 +1349,13 @@
     },
     {
       "path": "source/opc/frontend/package-lock.json",
-      "bytes": 357266,
-      "sha256": "1f47e74446143fac2963bcce308ca47b74d6d572238e420843dfcceafe3eea93"
+      "bytes": 357149,
+      "sha256": "e2c790778fa92ae5aff0dc5beec337a117514b163fa82ddb09775713add1f899"
     },
     {
       "path": "source/opc/frontend/package.json",
-      "bytes": 3552,
-      "sha256": "1ebf198a5be2df6508eabaa23ec4e158cc6b30f009651736ad0cd859a32bec31"
+      "bytes": 3714,
+      "sha256": "d468ef7c40ebbff20bfc85246ef22ebffc38a04b51c3a1aa1b7e06be90ea9307"
     },
     {
       "path": "source/opc/frontend/postcss.config.js",
