@@ -148,7 +148,7 @@ const CloudResourceDialog = ({
         purchase_type: data.purchase_type,
         start_date: data.start_date || undefined,
         end_date: data.end_date || null,
-        monthly_cost: data.monthly_cost || 0,
+        monthly_cost: Number(data.monthly_cost || 0),
         notes: data.notes || null,
       };
 

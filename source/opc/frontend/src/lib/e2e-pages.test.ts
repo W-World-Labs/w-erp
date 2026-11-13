@@ -215,7 +215,7 @@ describe('E2E: Authentication Flow (认证流程)', () => {
     });
 
     it('403 response does NOT trigger logout (just forbidden)', () => {
-        const status = 403;
+        const status: number = 403;
         const shouldLogout = status === 401;
         expect(shouldLogout).toBe(false);
     });

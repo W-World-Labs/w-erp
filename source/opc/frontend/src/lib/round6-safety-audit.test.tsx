@@ -93,7 +93,7 @@ describe('Round 6 — ErrorBoundary integration safety', () => {
     });
 
     it('should handle non-Error thrown value', () => {
-        const thrown = 42;
+        const thrown: unknown = 42;
         const err = thrown instanceof Error ? thrown : new Error(String(thrown));
         expect(err.message).toBe('42');
     });

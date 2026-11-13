@@ -273,7 +273,7 @@ export function SmartWorkbench({
                     <div>
                       <div className="flex flex-wrap items-center gap-2">
                         <span className="font-medium">{item.title}</span>
-                        <Badge variant="outline" className={item.badge.className}>
+                        <Badge variant="outline" className={item.badge.class_name}>
                           {item.badge.label}
                         </Badge>
                       </div>

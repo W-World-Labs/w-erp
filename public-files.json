@@ -1439,8 +1439,8 @@
     },
     {
       "path": "source/opc/frontend/src/components/ai/AICopilot.test.tsx",
-      "bytes": 6003,
-      "sha256": "113367f7e3cfba3580c554497507e0888379a987df2bf52ba1728fc613929d6f"
+      "bytes": 5993,
+      "sha256": "f70a5dc94ed783adbdb6208508354613da0f004598ef7e786adadd7be03a0aab"
     },
     {
       "path": "source/opc/frontend/src/components/ai/AICopilot.tsx",
@@ -1469,8 +1469,8 @@
     },
     {
       "path": "source/opc/frontend/src/components/assets/AssetDialog.tsx",
-      "bytes": 37580,
-      "sha256": "0a180c07718fc3b3d7f41e579ca15373b32ad4645d6bcc4b00c3ea57c158bbdc"
+      "bytes": 37574,
+      "sha256": "28978c10673c349ae779ab695ab6b1f1ddbff43aa54dc82d83bfcf6404ba2f7c"
     },
     {
       "path": "source/opc/frontend/src/components/assets/CategoryDialog.tsx",
@@ -1509,8 +1509,8 @@
     },
     {
       "path": "source/opc/frontend/src/components/cloud-cost/CloudResourceDialog.tsx",
-      "bytes": 12990,
-      "sha256": "b6c82ebe0a0df74c1867c93d617a7a1127a6dc1d97dfd51b4d8916d6a1f04129"
+      "bytes": 12998,
+      "sha256": "feb3d00b8a79d317ea5e8aa049665c2c037f5bc597cc6412abb99d4314917ffc"
     },
     {
       "path": "source/opc/frontend/src/components/cloud-cost/CloudResourceList.tsx",
@@ -1524,8 +1524,8 @@
     },
     {
       "path": "source/opc/frontend/src/components/cloud-cost/DomainSubscriptionDialog.tsx",
-      "bytes": 10725,
-      "sha256": "dc14c9fc735f94a6ae58b06630fb584bd93e6f12a4fe08ae982eb5ca22980015"
+      "bytes": 10741,
+      "sha256": "87a5926bfdf4b14a6176883153731f2068d070184c1fd288cb4a6dc7321663a5"
     },
     {
       "path": "source/opc/frontend/src/components/cloud-cost/DomainSubscriptionList.tsx",
@@ -1534,8 +1534,8 @@
     },
     {
       "path": "source/opc/frontend/src/components/cloud-cost/SoftwareSubscriptionDialog.tsx",
-      "bytes": 14523,
-      "sha256": "405d84cf2bd4a6c71059ceb494f38254669c766defd99ff7f682558df94c9cd5"
+      "bytes": 14539,
+      "sha256": "744816dd2d44775d72a52bfcc2f21168433068609eba0ab071b4027ce1111146"
     },
     {
       "path": "source/opc/frontend/src/components/cloud-cost/SoftwareSubscriptionList.tsx",
@@ -1664,8 +1664,8 @@
     },
     {
       "path": "source/opc/frontend/src/components/dashboard/SmartWorkbench.tsx",
-      "bytes": 19496,
-      "sha256": "9c7488a9717e0ecd62f591036d8c467421d3e19c74182acdf6938e019c2ce9da"
+      "bytes": 19497,
+      "sha256": "cc3e0748d2bcd624d4b4180d7bea25a751442c4459d3582db6f890de92494e4b"
     },
     {
       "path": "source/opc/frontend/src/components/dashboard/StageSelector.tsx",
@@ -1699,13 +1699,13 @@
     },
     {
       "path": "source/opc/frontend/src/components/invoices/InvoiceDialog.test.tsx",
-      "bytes": 4419,
-      "sha256": "f4b1dfeb0777a35066d05d80caab1b38880a7cb89b432d643e2d577a3d79212d"
+      "bytes": 4408,
+      "sha256": "dc585e9936c9ef7e1c98830dd3f41a0a5170c00ef4e2247faa785edb8b2070a4"
     },
     {
       "path": "source/opc/frontend/src/components/invoices/InvoiceDialog.tsx",
-      "bytes": 24191,
-      "sha256": "9666441b9e5ad6ce34caa2cbf7ce81943abc5560b3b978399af426d5d9856005"
+      "bytes": 24176,
+      "sha256": "caf717efc8e9f1ec9df2a01a7ffdc9f19d1df868505f6ce14e94f46fff5f15cd"
     },
     {
       "path": "source/opc/frontend/src/components/invoices/InvoiceImportDialog.tsx",
@@ -1764,8 +1764,8 @@
     },
     {
       "path": "source/opc/frontend/src/components/projects/RdCostDialog.tsx",
-      "bytes": 14847,
-      "sha256": "63b008f74dc664e0add0a10944c2477cc784dfd56ce92959004435bd4f4c32d9"
+      "bytes": 14844,
+      "sha256": "a692ecdc972959136ff59d6dc5978ff8f7b446055aa0fd7c6f34854c5ba53272"
     },
     {
       "path": "source/opc/frontend/src/components/rent/RentDialog.tsx",
@@ -1894,8 +1894,8 @@
     },
     {
       "path": "source/opc/frontend/src/components/ui/calendar.tsx",
-      "bytes": 2563,
-      "sha256": "845a0b0fdec33d8d49ab8ed05dd29a12c10b5bbcf60f24d0b9fc0a731ab18621"
+      "bytes": 2775,
+      "sha256": "51b033b97f2402e66e933e07a8934d5d5ad0c0fe5a746ce53be3b819564f8331"
     },
     {
       "path": "source/opc/frontend/src/components/ui/card.tsx",
@@ -1909,8 +1909,8 @@
     },
     {
       "path": "source/opc/frontend/src/components/ui/chart.tsx",
-      "bytes": 9987,
-      "sha256": "a759d32aa240fa6e929f204b04252e45d6ae458558eebd37dccf4ae9e05ab5e2"
+      "bytes": 10010,
+      "sha256": "8029d1046a4a72fa9f6edeec1410a1fd7462662d9e4d36cb0b4c54363759642d"
     },
     {
       "path": "source/opc/frontend/src/components/ui/checkbox.tsx",
@@ -2004,8 +2004,8 @@
     },
     {
       "path": "source/opc/frontend/src/components/ui/resizable.tsx",
-      "bytes": 1696,
-      "sha256": "a31af34c14c7c86612d1c2e51c90da59e0edae37dab5210bc1dd2c91dc2f3edd"
+      "bytes": 1666,
+      "sha256": "4b89662898a4ae77e573296ea1a0c46b43c5b125e3fab29651a9016d5e8922b2"
     },
     {
       "path": "source/opc/frontend/src/components/ui/scroll-area.tsx",
@@ -2134,8 +2134,8 @@
     },
     {
       "path": "source/opc/frontend/src/hooks/useDocumentParser.ts",
-      "bytes": 6681,
-      "sha256": "c994a21b051a6fb798897606c8f6ee1c8af3daa2d8c03872795aa6c057db6c2e"
+      "bytes": 6591,
+      "sha256": "933570042041e330176dfbb16efe293d3a3976ad3cd1da6ac76ff9289a393789"
     },
     {
       "path": "source/opc/frontend/src/hooks/useDocumentParserSettings.ts",
@@ -2184,8 +2184,8 @@
     },
     {
       "path": "source/opc/frontend/src/integrations/api/client.ts",
-      "bytes": 36265,
-      "sha256": "a4095dd15138443b9863a6a3e7c6663d7c09b156c8357cc6d34461c5b999ced2"
+      "bytes": 36261,
+      "sha256": "16eb53a3cac98a371344aa3a132f43cf150dc1f55f1f687ef8ce769839fd79df"
     },
     {
       "path": "source/opc/frontend/src/lib/ai-chat-history.test.ts",
@@ -2534,13 +2534,13 @@
     },
     {
       "path": "source/opc/frontend/src/lib/e2e-pages.test.ts",
-      "bytes": 12904,
-      "sha256": "d0e76da002a11ce865cec783912588077e2ae01d0f6df0a4f59ce659894bfa59"
+      "bytes": 12912,
+      "sha256": "a656ac8dda7aedd31947789d92aa59cc895cfeae0b6f41411e140c7c7f83d2bb"
     },
     {
       "path": "source/opc/frontend/src/lib/e2e-schema.test.ts",
-      "bytes": 17871,
-      "sha256": "440354651450b98afa12a6fbfb2534c24080db2eadd0b4e86c630ac7b41e9d04"
+      "bytes": 17898,
+      "sha256": "7252b3081786d2b995e9678b8f59effe918b153e117bef3f355a07970c9e847d"
     },
     {
       "path": "source/opc/frontend/src/lib/e2e.test.ts",
@@ -2624,8 +2624,8 @@
     },
     {
       "path": "source/opc/frontend/src/lib/round6-safety-audit.test.tsx",
-      "bytes": 4273,
-      "sha256": "47e1a3cb1f90e3a2c868bfafcb94abf7b93f3a360ae282ae21340e85e91340b0"
+      "bytes": 4282,
+      "sha256": "00c7a9457fedefa183ba7cbdbdb4b172f4cd7ae8d0fe5c843ab9703324ac96a4"
     },
     {
       "path": "source/opc/frontend/src/lib/round7-safety-audit.test.tsx",
@@ -2839,8 +2839,8 @@
     },
     {
       "path": "source/opc/frontend/src/pages/Rent.tsx",
-      "bytes": 30418,
-      "sha256": "9cdfde7c15a17be18e57e843e1adb39b4a53647556c1c70dd3fa10208f22a66c"
+      "bytes": 30335,
+      "sha256": "5be1e1eeebf72bb02b267c69adca500a811df89403b66b09ec42925db7dfe30e"
     },
     {
       "path": "source/opc/frontend/src/pages/Salary.tsx",
@@ -2849,8 +2849,8 @@
     },
     {
       "path": "source/opc/frontend/src/pages/Settings.tsx",
-      "bytes": 28070,
-      "sha256": "847a0bcd41e759b377a62c5eac7b28ff1851c925996d9d6b2471ff481cb835e5"
+      "bytes": 27989,
+      "sha256": "a2ac17500776a5d8ad5066f09cd207fbeed03e4ec9c980db4484866bb4b934da"
     },
     {
       "path": "source/opc/frontend/src/pages/TaxCalendar.tsx",
@@ -2895,7 +2895,7 @@
     {
       "path": "source/opc/frontend/tsconfig.app.json",
       "bytes": 632,
-      "sha256": "8840a5481ae846181bc6a6db32cccad5e4c8daabfd74b02a7b4468153020d6e6"
+      "sha256": "3ec8a7803d17723cae6f721a6ab9e30345e3d2493c763f2073f9592576b6f404"
     },
     {
       "path": "source/opc/frontend/tsconfig.json",

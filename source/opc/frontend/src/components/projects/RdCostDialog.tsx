@@ -237,7 +237,7 @@ export function RdCostDialog({
                                                     mode="single"
                                                     selected={field.value}
                                                     onSelect={field.onChange}
-                                                    initialFocus
+                                                    autoFocus
                                                     className="pointer-events-auto"
                                                 />
                                             </PopoverContent>

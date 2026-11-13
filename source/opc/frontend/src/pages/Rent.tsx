@@ -37,7 +37,7 @@ import {
 } from "recharts";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import { api, type BackendAction } from "@/integrations/api/client";
+import { api, type BackendAction, type DeleteAction } from "@/integrations/api/client";
 import { toast } from "@/components/ui/use-toast";
 import { RentDialog } from "@/components/rent/RentDialog";
 import { UtilityDialog } from "@/components/utilities/UtilityDialog";
@@ -60,12 +60,6 @@ interface DisplayBadge {
   label: string;
   variant: BadgeVariant;
   class_name?: string;
-}
-
-interface DeleteAction {
-  endpoint: string;
-  success_message: string;
-  confirm_message: string;
 }
 
 interface RentRow {

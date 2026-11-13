@@ -69,7 +69,7 @@ const invoiceSchema = z.object({
   client_id: z.string().optional().or(z.literal('')),
   amount: z.string().min(1, '金额不能为空'),
   tax_amount: z.string().optional(),
-  invoice_date: z.date({ required_error: '请选择开票日期' }),
+  invoice_date: z.date({ error: '请选择开票日期' }),
   due_date: z.date().optional(),
   description: z.string().max(500, '描述不能超过500字符').optional(),
   invoice_type: z.string().optional(),
@@ -531,7 +531,7 @@ export function InvoiceDialog({ open, onOpenChange, invoice, action: createActio
                           selected={field.value}
                           onSelect={field.onChange}
                           disabled={(date) => date > new Date()}
-                          initialFocus
+                          autoFocus
                           className="pointer-events-auto"
                         />
                       </PopoverContent>
@@ -571,7 +571,7 @@ export function InvoiceDialog({ open, onOpenChange, invoice, action: createActio
                           mode="single"
                           selected={field.value}
                           onSelect={field.onChange}
-                          initialFocus
+                          autoFocus
                           className="pointer-events-auto"
                         />
                       </PopoverContent>

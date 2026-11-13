@@ -491,7 +491,7 @@ export function AssetDialog({ open, onOpenChange, asset, action: createAction, o
                           selected={field.value}
                           onSelect={field.onChange}
                           disabled={(date) => date > new Date()}
-                          initialFocus
+                          autoFocus
                           className="pointer-events-auto"
                         />
                       </PopoverContent>
@@ -671,7 +671,7 @@ export function AssetDialog({ open, onOpenChange, asset, action: createAction, o
                             mode="single"
                             selected={field.value}
                             onSelect={field.onChange}
-                            initialFocus
+                            autoFocus
                             className="pointer-events-auto"
                           />
                         </PopoverContent>

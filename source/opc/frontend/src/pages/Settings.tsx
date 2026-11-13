@@ -6,7 +6,7 @@ import { Switch } from "@/components/ui/switch";
 import { Building2, Users, Bell, Shield, Database, CheckCircle2, AlertCircle, FileSearch, Brain, Plus, Pencil, Trash2, Mail, type LucideIcon } from "lucide-react";
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
-import { api, type BackendAction } from "@/integrations/api/client";
+import { api, type BackendAction, type DeleteAction } from "@/integrations/api/client";
 import { API_ENDPOINTS } from "@/lib/api";
 import { useNavigate } from "react-router-dom";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
@@ -45,12 +45,6 @@ type BackupListItem = {
   size_bytes?: number;
   created_at?: string;
   status?: string;
-};
-
-type DeleteAction = {
-  endpoint: string;
-  confirm_message: string;
-  success_message: string;
 };
 
 type SettingsConfig = {

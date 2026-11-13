@@ -50,7 +50,7 @@ describe('OCR invoice confirmation', () => {
     await parse();
     expect(screen.getByLabelText('价税合计（元）*')).toHaveValue('113');
     expect(screen.getByLabelText('供应商名称 *')).toHaveValue('Seller Company');
-    fireEvent.click(screen.getByRole('button', { name: '添加', exact: true }));
+    fireEvent.click(screen.getByRole('button', { name: /^添加$/ }));
     await waitFor(() => expect(mocks.runAction).toHaveBeenCalledWith(props.action, expect.objectContaining({
       amount: '113', tax_amount: '13', supplier: 'Seller Company', invoice_type: 'payable',
     })));

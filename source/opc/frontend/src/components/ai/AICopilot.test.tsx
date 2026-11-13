@@ -31,7 +31,7 @@ async function open() {
 async function chooseModel() {
   const user = userEvent.setup();
   await user.click(screen.getByRole('combobox', { name: '对话模型' }));
-  await user.click(screen.getByRole('option', { name: 'maas/model-b', exact: true }));
+  await user.click(screen.getByRole('option', { name: /^maas\/model-b$/ }));
 }
 async function send() {
   fireEvent.change(screen.getByPlaceholderText('问我任何问题...'), { target: { value: '分析本月收入' } });

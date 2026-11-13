@@ -139,7 +139,6 @@ export async function preprocessImageForOcr(file: File): Promise<string> {
     // Tiny / already-small files: still re-encode when possible so EXIF is applied.
     try {
         const bitmap = await createImageBitmap(file, {
-            // @ts-expect-error imageOrientation is widely supported; TS DOM lib may lag.
             imageOrientation: 'from-image',
         } as ImageBitmapOptions);
         try {

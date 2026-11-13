@@ -124,7 +124,7 @@ describe('E2E: 68-Table Schema Registry', () => {
 
         it('most business tables require company_id (>= 90%)', () => {
             const withCompanyId = tableNames.filter(t => {
-                const s = SCHEMA_TABLES[t as keyof typeof SCHEMA_TABLES];
+                const s: { fk: readonly string[] } = SCHEMA_TABLES[t as keyof typeof SCHEMA_TABLES];
                 return s?.fk.includes('company_id');
             });
             const ratio = withCompanyId.length / tableNames.length;

@@ -120,13 +120,13 @@ export const api = {
     const method = action.method;
     switch (method) {
       case "POST":
-        return this.post<T>(action.endpoint, data ?? {});
+        return api.post<T>(action.endpoint, data ?? {});
       case "PUT":
-        return this.put<T>(action.endpoint, data ?? {});
+        return api.put<T>(action.endpoint, data ?? {});
       case "DELETE":
-        return this.delete<T>(action.endpoint);
+        return api.delete<T>(action.endpoint);
       case "GET":
-        return this.get<T>(action.endpoint);
+        return api.get<T>(action.endpoint);
       default:
         throw new Error(`Unsupported backend action method: ${method}`);
     }
