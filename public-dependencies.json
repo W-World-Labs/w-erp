@@ -115,12 +115,12 @@
     }
   ],
   "lockfiles": {
-    "npm": "Static file-dependency/source rewrite only; npm ci was not run",
+    "npm": "Prepared as public local-file links; public CI runs npm ci against the complete repository checkout",
     "cargo": "Generated from public Git pins and the public crates.io sparse index using cargo generate-lockfile; metadata resolution only, no registry package archives or builds"
   },
-  "validation": "Static exported API review and Cargo dependency metadata resolution only; npm local-file lock was rewritten statically; no package installation, builds, tests or CI",
+  "validation": "Local static review and metadata-only Cargo resolution; typecheck, dependency installation, build and existing isolated tests run only in public CI on exact source commits",
   "pending": [
-    "Commons pin currently references the public source snapshot; coordinator final public-root pin remains pending",
-    "npm ci lock acceptance, dependency license closure, vulnerability review and application build/functional acceptance remain pending"
+    "Commons pin remains the existing reachable public source snapshot until a separately reviewed replacement is published",
+    "Dependency-license closure for compiled distributions and production/runtime acceptance are separate from source CI"
   ]
 }

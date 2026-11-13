@@ -1,0 +1,87 @@
+name: Public source CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: public-source-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    env:
+      APP_URL: http://localhost:8987
+      W_ID_SSO_URL: https://identity.example.invalid
+      W_RADAR_CODE: ""
+      SELF_UPDATE_AUTO_APPLY: "0"
+      CARGO_BUILD_JOBS: "2"
+      CARGO_PROFILE_DEV_DEBUG: "0"
+      CARGO_PROFILE_TEST_DEBUG: "0"
+    steps:
+      - name: Check out source
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+
+      - name: Set up Node
+        uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: "24"
+          cache: npm
+          cache-dependency-path: source/opc/frontend/package-lock.json
+
+      - name: Set up Rust
+        run: |
+          rustup toolchain install 1.96.0 --profile minimal
+          rustup default 1.96.0
+
+      - name: Validate existing offline fixtures and test layout
+        run: |
+          python3 source/opc/backend/scripts/test_rust_test_layout.py
+          python3 scripts/test_ocr_benchmark.py
+          python3 scripts/ocr_benchmark.py validate
+          python3 scripts/test_contract_benchmark.py
+          python3 scripts/contract_benchmark.py validate
+
+      - name: Install public frontend dependencies
+        working-directory: source/opc/frontend
+        run: npm ci
+
+      - name: Typecheck frontend
+        working-directory: source/opc/frontend
+        run: npm run typecheck
+
+      - name: Lint frontend
+        working-directory: source/opc/frontend
+        run: npm run lint
+
+      - name: Run existing frontend tests
+        working-directory: source/opc/frontend
+        run: npm test
+
+      - name: Build frontend
+        working-directory: source/opc/frontend
+        run: npm run build
+
+      - name: Check backend targets
+        working-directory: source/opc/backend
+        run: cargo check --locked --all-targets --all-features
+
+      - name: Build backend and CLI for isolated tests
+        working-directory: source/opc/backend
+        run: cargo build --locked --bins
+
+      - name: Run existing backend tests
+        working-directory: source/opc/backend
+        run: cargo test --locked --all-features
+
+      - name: Verify backend heartbeat against loopback Radar
+        run: python3 scripts/test_backend_heartbeat.py source/opc/backend/target/debug/opc-server

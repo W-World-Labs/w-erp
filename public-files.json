@@ -4,8 +4,13 @@
   "files": [
     {
       "path": ".dockerignore",
-      "bytes": 88,
-      "sha256": "ff3dcd90f262dfaeb64617c3ab600957a04f72ad4e08cc804416113aa0fb317e"
+      "bytes": 140,
+      "sha256": "f8edd5c1fd21f0b21d95839a50fb2346b0a6bc19cbbdb1422002f6c8fb4d78be"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "bytes": 2572,
+      "sha256": "c885226ff2bb6835734bc0784d8b7286819e647476917820219c28b84ad2bd4b"
     },
     {
       "path": ".gitignore",
@@ -14,8 +19,8 @@
     },
     {
       "path": "AGENTS.md",
-      "bytes": 811,
-      "sha256": "5421fd2d934779240ead28f545a967c61d79590886e3927494b638795e5e66c7"
+      "bytes": 974,
+      "sha256": "102e8db5fe3dd7ca125ab2c0588d51176572cb307c938ec4bdd34c4dd2ebc6c7"
     },
     {
       "path": "LICENSE",
@@ -24,13 +29,13 @@
     },
     {
       "path": "README.md",
-      "bytes": 15971,
-      "sha256": "9f896729b42abffc508483151cd108b40217acf5f7e1225097cdc13b28f5a5d0"
+      "bytes": 16573,
+      "sha256": "bd7a0280c344906726caf008c94b02456bcd7e94f30be5f158c278051fc6de16"
     },
     {
       "path": "THIRD-PARTY-NOTICES.md",
-      "bytes": 3287,
-      "sha256": "3def2b70691d0c72e6968f9169fa93c833ea604ec47062ca64b4d87b263787ff"
+      "bytes": 3556,
+      "sha256": "7ec7be92487eeb18c1718b8870d93cb0136ccf25927fcfcbd7937e194c6bed84"
     },
     {
       "path": "licenses/Noto-OFL-1.1.txt",
@@ -44,8 +49,8 @@
     },
     {
       "path": "public-dependencies.json",
-      "bytes": 6443,
-      "sha256": "6699a602cc3269893d5fc79d9c8b0349e2593beef96fdc62fbe9656305d217d7"
+      "bytes": 6479,
+      "sha256": "b90705b9600b5c6917dda863d20e37f34827c228959b996f75f087675f33666a"
     },
     {
       "path": "scripts/contract_benchmark.py",
@@ -59,8 +64,8 @@
     },
     {
       "path": "scripts/test_backend_heartbeat.py",
-      "bytes": 5628,
-      "sha256": "a1a8783b26100e148dcc6267161dcde86de2f3bf45c439d12f5a30fd51a1465e"
+      "bytes": 5629,
+      "sha256": "a4acad8bb29723bf66b2b1e1034114211b5569e42f3060bdbbf86e306735e76e"
     },
     {
       "path": "scripts/test_contract_benchmark.py",
@@ -199,8 +204,8 @@
     },
     {
       "path": "source/opc/backend/scripts/test_rust_test_layout.py",
-      "bytes": 2722,
-      "sha256": "9192bae960d437002188700c57c7c3fffec87a56f0688c280677ac20d46007e6"
+      "bytes": 2723,
+      "sha256": "fde525c8b797c85d8c37021c8a690ad3b564a2d0b00d31eb44288cc2c3d22198"
     },
     {
       "path": "source/opc/backend/scripts/test_seed_complete_e2e_dataset.py",
@@ -1349,8 +1354,8 @@
     },
     {
       "path": "source/opc/frontend/package.json",
-      "bytes": 3460,
-      "sha256": "01e912bc69b68326d059b3ce1e502a0be9b080ab6bada8adfac94c69dbd070a9"
+      "bytes": 3552,
+      "sha256": "1ebf198a5be2df6508eabaa23ec4e158cc6b30f009651736ad0cd859a32bec31"
     },
     {
       "path": "source/opc/frontend/postcss.config.js",
@@ -2889,13 +2894,13 @@
     },
     {
       "path": "source/opc/frontend/tsconfig.app.json",
-      "bytes": 652,
-      "sha256": "3d44641a0151484d5adb5c764a4766a8e31076d2fd557dbe8c6e1c87863058f7"
+      "bytes": 632,
+      "sha256": "8840a5481ae846181bc6a6db32cccad5e4c8daabfd74b02a7b4468153020d6e6"
     },
     {
       "path": "source/opc/frontend/tsconfig.json",
-      "bytes": 369,
-      "sha256": "3a667cdf83b8335029de6380d1dc190d298d976df6c16259d562786ef13e3f07"
+      "bytes": 349,
+      "sha256": "1e988077b62a974474d6029cf8ac0c97521852ce0d8f24a68ee9783d69bcfc0a"
     },
     {
       "path": "source/opc/frontend/tsconfig.node.json",

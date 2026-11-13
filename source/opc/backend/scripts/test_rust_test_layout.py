@@ -12,7 +12,7 @@ ROOT = Path(__file__).resolve().parents[1]
 CARGO_TOML = ROOT / "Cargo.toml"
 TESTS_DIR = ROOT / "tests"
 INTEGRATION_HARNESS = TESTS_DIR / "integration.rs"
-WORKFLOW = ROOT.parents[2] / ".gitea" / "workflows" / "ci.yml"
+WORKFLOW = ROOT.parents[2] / ".github" / "workflows" / "ci.yml"
 
 
 def fail(message: str) -> None:

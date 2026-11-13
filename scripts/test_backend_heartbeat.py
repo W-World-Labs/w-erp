@@ -69,7 +69,7 @@ try:
                 assert payload['process']['pid'] == process.pid
                 assert payload['project_id'] == 'w-erp'
                 assert payload['instance_id'] == 'erp-heartbeat-test'
-                assert payload['sdks']['xradar'] == '0.3.8'
+                assert payload['sdks']['xradar'] == '0.3.11'
                 gaps = [beats[i + 1][4] - beats[i][4] for i in range(2)]
                 assert all(8 < gap < 12 for gap in gaps), gaps
                 for beat in beats:

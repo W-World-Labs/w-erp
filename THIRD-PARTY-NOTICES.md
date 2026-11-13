@@ -10,7 +10,9 @@ external assets retain the separate terms and review holds below.
   metadata names Adobe (2014-2021), Reserved Font Name `Source`, version 2.004-H2.
   SIL OFL 1.1 is preserved in `licenses/Noto-OFL-1.1.txt`; upstream:
   https://github.com/notofonts/noto-cjk/blob/main/Sans/LICENSE . Exact conversion
-  provenance was not recorded by the source project and remains for review.
+  provenance was not recorded; this is disclosed as a provenance limitation.
+  OFL permits modified versions and subsetting, and the declared Reserved Font
+  Name is not used as the primary name of these derivatives.
 - `source/opc/frontend/src/components/ui`: shadcn/ui-derived UI components.
   Copyright (c) 2023 shadcn; MIT text in `licenses/shadcn-MIT.txt`.
   https://github.com/shadcn-ui/ui/blob/main/LICENSE.md .
@@ -41,8 +43,10 @@ the source of those raster images.
 Rust and npm libraries remain under their own package licenses. The dependency
 inventory records package metadata, versions, sources and license fields when
 available; it is not a legal opinion or a completed vulnerability audit.
-No dependency installer, build, test or generated release artifact was run for this
-candidate. Static source checks do not establish production activation or acceptance.
+Public CI installs public dependencies and validates source on a standard hosted
+runner. It publishes no compiled artifacts. Binary and container distributions
+require their own dependency-license and notice packaging acceptance; source
+checks do not establish production activation or acceptance.
 
 ## Public W browser SDKs
 

@@ -10,3 +10,5 @@ Build the frontend before the release backend; `build.rs` embeds `frontend/dist`
 The existing Rust integration suite is aggregated through `tests/integration.rs`; preserve `autotests = false`.
 Public dependency pins and third-party notices are part of this distribution.
 No private CI or production deployment workflow is shipped here.
+Public CI uses a standard GitHub-hosted Linux runner to typecheck, build and run
+the existing isolated tests. It uploads no compiled artifacts or deployment data.

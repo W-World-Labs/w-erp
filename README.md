@@ -218,14 +218,21 @@ python3 scripts/test_backend_heartbeat.py source/opc/backend/target/x86_64-unkno
 `THIRD-PARTY-NOTICES.md` 记录随附第三方材料；`source-provenance.json` 和 `public-files.json` 固定范围及来源。
 公开源码不会配置任何生产租户、遥测码或平台客户端；请填写自己的 OAuth、AI、邮件和遥测参数。
 
-此候选仅经过静态净化审查，没有进行本机依赖安装、编译、测试、CI、上传或部署。
-自有代码按 MIT 许可开放；独立公开复审完成前，不得视作已可上传的正式开源版本。构建兼容性和应用完整验收尚未验证。
+本地候选审查不安装依赖、不编译或运行产品测试。自有代码按 MIT 许可开放，第三方材料保留各自条款。
+公开 CI 的结果以具体提交的 GitHub 检查为准；它不代表生产部署或完整应用运行验收。
+
+## 公开 CI
+
+`.github/workflows/ci.yml` 使用标准 Linux x64 runner、Node 24 和 Rust 1.96，先构建前端，再检查后端和 CLI。
+工作流执行类型检查、既有前后端测试、离线样本校验，以及面向 loopback Radar 的心跳检查；不使用生产 OAuth、邮件、模型或遥测凭据。
+既有 webhook 测试会向 httpbin 发送合成测试事件，并检查网络失败时的结构化响应；其余服务测试使用内存数据库和本机 mock。
+CI 不发布二进制、容器、运行数据或安装目录。源码分发保留 `public-files.json` 列出的文件、公共 SDK 入口及所有许可声明；编译产物的许可闭包和正式发布另行验收。
 
 ## 公共依赖
 
 Rust W 库使用 `Cargo.toml` 中固定的公开 Git 提交；`w-notify` 对应公共版本 0.1.3，调用的 `Channel::from_url`、`Message::new/title` 和 `send` 入口经静态核对保留。
 浏览器 `@w/http-web` 和 `@w/xradar` 来自 W-Radar 的固定公开 SDK 子目录，随附于 `vendor/`，通过本地 `file:` 依赖引用，无私有 npm token。
-Cargo 锁文件已仅通过公开 Git pin 和 crates.io sparse 索引重新解析，使用隔离临时缓存，未下载 registry 包归档、未执行 build.rs、安装、编译或测试；公共依赖最终 pin、npm 本地锁文件接受性及应用构建验收仍待核验。
+Cargo 锁文件仅通过公开 Git pin 和 crates.io sparse 索引重新解析；本地只执行元数据解析。公共 CI 使用锁文件安装和验证依赖，结果归属于具体源码提交。
 容器从仓库根构建，内含前端 dist 和字体；它是基于 Debian 的动态容器产品，不是已验收的静态 Linux 正式二进制。
 
 ## 许可
