@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "project": "w-erp",
+  "public_source": {
+    "repository": "https://github.com/W-World-Labs/w-erp",
+    "version": "1.0.8"
+  },
+  "license": "MIT for W-owned source; third-party terms are preserved separately",
+  "distribution_scope": "Complete ERP application source: backend, frontend, CLI, SSO, telemetry, business APIs, AI/OCR, existing tests and licensed fixtures",
+  "file_hashes": "public-files.json contains the exhaustive candidate file allowlist and SHA-256 values",
+  "public_dependencies": "public-dependencies.json records public repository pins and selected public browser SDK files"
+}

@@ -1,0 +1,20 @@
+# Build artifacts
+target/
+
+# Database
+*.db
+*.sqlite
+*.sqlite-*
+data.db
+oneman.db
+data/database.sqlite
+data/database.sqlite-*
+data/oneman.db
+data/uploads/
+backend.log
+
+# Environment (keep .env.example)
+.env
+
+# OS
+.DS_Store

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EInvoice>
+  <Header>
+    <EIid>25332000000012345678</EIid>
+    <EInvoiceTag>S</EInvoiceTag>
+  </Header>
+  <EInvoiceData>
+    <InvoiceNumber>25332000000012345678</InvoiceNumber>
+    <IssueDate>2026-03-05</IssueDate>
+    <BuyerInformation>
+      <BuyerName>测试购方有限公司</BuyerName>
+      <TaxpayerIdentificationNumber>91330000MA2XXXXX1A</TaxpayerIdentificationNumber>
+    </BuyerInformation>
+    <SellerInformation>
+      <SellerName>测试销方科技有限公司</SellerName>
+      <TaxpayerIdentificationNumber>91310000MA1YYYYY2B</TaxpayerIdentificationNumber>
+    </SellerInformation>
+    <TaxInclusiveTotalAmount>113.00</TaxInclusiveTotalAmount>
+    <TaxExclusiveTotalAmount>100.00</TaxExclusiveTotalAmount>
+    <TaxTotalAmount>13.00</TaxTotalAmount>
+    <IssuItemInformation>
+      <ItemName>*信息技术服务*软件服务费</ItemName>
+      <Specification>V1</Specification>
+      <MeasurementDimension>次</MeasurementDimension>
+      <Quantity>1</Quantity>
+      <Price>100.00</Price>
+      <Amount>100.00</Amount>
+      <TaxScheme>0.13</TaxScheme>
+      <TaxAmount>13.00</TaxAmount>
+    </IssuItemInformation>
+  </EInvoiceData>
+</EInvoice>

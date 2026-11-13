@@ -1,0 +1,472 @@
+{
+  "version": 1,
+  "cases": [
+    {
+      "id": "synthetic-01_invoice",
+      "category": "invoice",
+      "language": "zh-CN",
+      "split": "regression",
+      "file": "fixtures/01_invoice.png",
+      "storage": "repository",
+      "sha256": "2b54106d489de911273ba279101cf39fa1236c00ad43e396b78eb573a0be48dc",
+      "source": {
+        "url": "https://github.com/W-World-Labs/w-erp",
+        "download_url": "repository:fixtures/01_invoice.png",
+        "license": "Project-owned synthetic test fixture",
+        "license_url": "repository:README.md",
+        "retrieved_at": "2026-09-07"
+      },
+      "reference_text": "增值税电子普通发票（合成测试）\n发票号码：TEST202609070001\n开票日期：2026年09月07日\n购方名称：虚构星河研发有限公司\n销方名称：虚构青禾技术有限公司\n项目名称：软件技术服务\n数量：1    单位：次    单价：100.00元\n不含税金额：100.00元\n税率：13%    税额：13.00元\n价税合计（小写）：113.00元\n价税合计（大写）：壹佰壹拾叁元整\n备注：所有内容均为人工合成，不具有报销效力。",
+      "expected_fields": {
+        "invoice_number": "TEST202609070001",
+        "invoice_date": "2026-09-07",
+        "buyer": "虚构星河研发有限公司",
+        "supplier": "虚构青禾技术有限公司",
+        "amount": "100.00",
+        "tax_amount": "13.00",
+        "total_amount": "113.00",
+        "tax_rate": "13%",
+        "description": "软件技术服务"
+      },
+      "family": "synthetic-invoice",
+      "expected_text_values": {
+        "invoice_number": "TEST202609070001",
+        "invoice_date": "2026年09月07日",
+        "buyer": "虚构星河研发有限公司",
+        "supplier": "虚构青禾技术有限公司",
+        "amount": "100.00",
+        "tax_amount": "13.00",
+        "total_amount": "113.00",
+        "tax_rate": "13%",
+        "description": "软件技术服务"
+      },
+      "ground_truth_method": "Generated reference text, visually checked before inference; all names and documents fictitious.",
+      "notes": "Initial synthetic smoke fixture; invoice tilt is not an independent document."
+    },
+    {
+      "id": "synthetic-02_contract",
+      "category": "contract",
+      "language": "zh-CN",
+      "split": "regression",
+      "file": "fixtures/02_contract.png",
+      "storage": "repository",
+      "sha256": "9f8cc94f3d03eb2f5eda41ce6268d1f2a770cccf697869593a839377c5165261",
+      "source": {
+        "url": "https://github.com/W-World-Labs/w-erp",
+        "download_url": "repository:fixtures/02_contract.png",
+        "license": "Project-owned synthetic test fixture",
+        "license_url": "repository:README.md",
+        "retrieved_at": "2026-09-07"
+      },
+      "reference_text": "软件服务合同（合成测试）\n合同编号：DEMO-HT-2026-007\n甲方：虚构星河研发有限公司\n乙方：虚构青禾技术有限公司\n签订日期：2026年09月07日\n服务内容：乙方为甲方提供测试网站维护服务。\n服务期限：2026年09月10日至2026年12月09日。\n合同总金额：人民币3000.00元（含税）。\n付款期限：验收合格且收到发票后15个自然日内付清。\n验收标准：完成三次维护并提交书面测试报告。\n违约条款：每逾期一日，按未付金额的0.05%支付违约金。\n违约金累计不超过合同总金额的10%。\n争议处理：双方先协商；协商不成提交甲方所在地法院。\n说明：本页仅用于OCR测试，无真实签章及法律效力。",
+      "expected_fields": {
+        "contract_number": "DEMO-HT-2026-007",
+        "party_a": "虚构星河研发有限公司",
+        "party_b": "虚构青禾技术有限公司",
+        "sign_date": "2026-09-07",
+        "start_date": "2026-09-10",
+        "end_date": "2026-12-09",
+        "total_amount": "3000.00",
+        "payment_terms": "验收合格且收到发票后15个自然日内付清",
+        "late_fee_daily_rate": "0.05%",
+        "late_fee_cap": "10%"
+      },
+      "family": "02_contract",
+      "expected_text_values": {
+        "contract_number": "DEMO-HT-2026-007",
+        "party_a": "虚构星河研发有限公司",
+        "party_b": "虚构青禾技术有限公司",
+        "sign_date": "2026年09月07日",
+        "start_date": "2026年09月10日",
+        "end_date": "2026年12月09日",
+        "total_amount": "3000.00",
+        "payment_terms": "验收合格且收到发票后15个自然日内付清",
+        "late_fee_daily_rate": "0.05%",
+        "late_fee_cap": "10%"
+      },
+      "ground_truth_method": "Generated reference text, visually checked before inference; all names and documents fictitious.",
+      "notes": "Initial synthetic smoke fixture; invoice tilt is not an independent document."
+    },
+    {
+      "id": "synthetic-03_expenses",
+      "category": "expense_table",
+      "language": "zh-CN",
+      "split": "regression",
+      "file": "fixtures/03_expenses.png",
+      "storage": "repository",
+      "sha256": "7ec68131646fdfeeb7dc70963165684278c6d4cb2cbece580decce62a09cb6c5",
+      "source": {
+        "url": "https://github.com/W-World-Labs/w-erp",
+        "download_url": "repository:fixtures/03_expenses.png",
+        "license": "Project-owned synthetic test fixture",
+        "license_url": "repository:README.md",
+        "retrieved_at": "2026-09-07"
+      },
+      "reference_text": "费用明细表（合成测试）\n报销单号：DEMO-FY-2026-009\n填表日期：2026年09月07日\n部门：虚构产品测试部    经办人：测试员甲\n费用项目\t数量\t单价（元）\t金额（元）\n办公耗材\t5\t17.90\t89.50\n市内交通\t3\t80.00\t240.00\n快递费用\t2\t18.00\t36.00\n合计\t\t\t365.50\n金额大写：叁佰陆拾伍元伍角整\n备注：本表为人工合成，无实际报销事项。",
+      "expected_fields": {
+        "document_number": "DEMO-FY-2026-009",
+        "date": "2026-09-07",
+        "total_amount": "365.50",
+        "item_1_name": "办公耗材",
+        "item_1_quantity": "5",
+        "item_1_unit_price": "17.90",
+        "item_1_amount": "89.50",
+        "item_2_name": "市内交通",
+        "item_2_quantity": "3",
+        "item_2_unit_price": "80.00",
+        "item_2_amount": "240.00",
+        "item_3_name": "快递费用",
+        "item_3_quantity": "2",
+        "item_3_unit_price": "18.00",
+        "item_3_amount": "36.00"
+      },
+      "family": "03_expenses",
+      "expected_text_values": {
+        "document_number": "DEMO-FY-2026-009",
+        "date": "2026年09月07日",
+        "total_amount": "365.50",
+        "item_1_name": "办公耗材",
+        "item_1_quantity": "5",
+        "item_1_unit_price": "17.90",
+        "item_1_amount": "89.50",
+        "item_2_name": "市内交通",
+        "item_2_quantity": "3",
+        "item_2_unit_price": "80.00",
+        "item_2_amount": "240.00",
+        "item_3_name": "快递费用",
+        "item_3_quantity": "2",
+        "item_3_unit_price": "18.00",
+        "item_3_amount": "36.00"
+      },
+      "ground_truth_method": "Generated reference text, visually checked before inference; all names and documents fictitious.",
+      "notes": "Initial synthetic smoke fixture; invoice tilt is not an independent document."
+    },
+    {
+      "id": "synthetic-04_invoice_tilted",
+      "category": "invoice",
+      "language": "zh-CN",
+      "split": "regression",
+      "file": "fixtures/04_invoice_tilted.png",
+      "storage": "repository",
+      "sha256": "c37f1cecce387a9db59c43209a64592ef08937faa4f94aadacc96c21869eb7f2",
+      "source": {
+        "url": "https://github.com/W-World-Labs/w-erp",
+        "download_url": "repository:fixtures/04_invoice_tilted.png",
+        "license": "Project-owned synthetic test fixture",
+        "license_url": "repository:README.md",
+        "retrieved_at": "2026-09-07"
+      },
+      "reference_text": "增值税电子普通发票（合成测试）\n发票号码：TEST202609070001\n开票日期：2026年09月07日\n购方名称：虚构星河研发有限公司\n销方名称：虚构青禾技术有限公司\n项目名称：软件技术服务\n数量：1    单位：次    单价：100.00元\n不含税金额：100.00元\n税率：13%    税额：13.00元\n价税合计（小写）：113.00元\n价税合计（大写）：壹佰壹拾叁元整\n备注：所有内容均为人工合成，不具有报销效力。",
+      "expected_fields": {
+        "invoice_number": "TEST202609070001",
+        "invoice_date": "2026-09-07",
+        "buyer": "虚构星河研发有限公司",
+        "supplier": "虚构青禾技术有限公司",
+        "amount": "100.00",
+        "tax_amount": "13.00",
+        "total_amount": "113.00",
+        "tax_rate": "13%",
+        "description": "软件技术服务"
+      },
+      "family": "synthetic-invoice",
+      "expected_text_values": {
+        "invoice_number": "TEST202609070001",
+        "invoice_date": "2026年09月07日",
+        "buyer": "虚构星河研发有限公司",
+        "supplier": "虚构青禾技术有限公司",
+        "amount": "100.00",
+        "tax_amount": "13.00",
+        "total_amount": "113.00",
+        "tax_rate": "13%",
+        "description": "软件技术服务"
+      },
+      "ground_truth_method": "Generated reference text, visually checked before inference; all names and documents fictitious.",
+      "notes": "Initial synthetic smoke fixture; invoice tilt is not an independent document."
+    },
+    {
+      "id": "azure-invoice-image",
+      "category": "invoice",
+      "language": "en-US",
+      "split": "challenge",
+      "file": "fixtures/azure-invoice-sample.jpg",
+      "storage": "repository",
+      "sha256": "489f0c63b6a05e0ae0fcfbf29121299fc2ccacab35d5cd40a5d63d42764078cb",
+      "source": {
+        "url": "https://github.com/Azure-Samples/document-intelligence-code-samples/blob/8ac994c2712f3104d00ca4224b0ded6fd1ecbf70/Data/invoice/invoice_sample.jpg",
+        "download_url": "https://raw.githubusercontent.com/Azure-Samples/document-intelligence-code-samples/8ac994c2712f3104d00ca4224b0ded6fd1ecbf70/Data/invoice/invoice_sample.jpg",
+        "license": "MIT",
+        "license_url": "https://github.com/Azure-Samples/document-intelligence-code-samples/blob/8ac994c2712f3104d00ca4224b0ded6fd1ecbf70/LICENSE.md",
+        "retrieved_at": "2026-09-07",
+        "revision": "8ac994c2712f3104d00ca4224b0ded6fd1ecbf70"
+      },
+      "reference_text": null,
+      "expected_fields": {
+        "invoice_number": "INV-100",
+        "invoice_date": "2019-11-15",
+        "due_date": "2019-12-15",
+        "supplier": "CONTOSO LTD.",
+        "buyer": "MICROSOFT CORPORATION",
+        "subtotal": "100.00",
+        "tax_amount": "10.00",
+        "total_amount": "110.00",
+        "previous_unpaid_balance": "500.00",
+        "total_due": "610.00",
+        "purchase_order_number": "PO-3333",
+        "description": "Consulting service"
+      },
+      "expected_text_values": {
+        "invoice_number": "INV-100",
+        "invoice_date": "11/15/2019",
+        "due_date": "12/15/2019",
+        "supplier": "CONTOSO LTD.",
+        "buyer": "MICROSOFT CORPORATION",
+        "subtotal": "100.00",
+        "tax_amount": "10.00",
+        "total_amount": "110.00",
+        "previous_unpaid_balance": "500.00",
+        "total_due": "610.00",
+        "purchase_order_number": "PO-3333",
+        "description": "Consulting service"
+      },
+      "family": "azure-contoso-invoice",
+      "ground_truth_method": "Human visual inspection of original JPG / rendered PDF; second reviewer checked JPG business field associations.",
+      "notes": "Microsoft published sample, not a customer invoice. Total 110 differs from previous balance 500 and total due 610. Printed unit price 1 is internally inconsistent with line total 100; do not silently correct it."
+    },
+    {
+      "id": "azure-invoice-pdf",
+      "category": "invoice",
+      "language": "en-US",
+      "split": "challenge",
+      "file": "fixtures/azure-sample-invoice.pdf",
+      "storage": "repository",
+      "sha256": "c2ce1edcbb91cf8f6685f4749a5eedcb752795e5e8f0a126f13953a0f3974f69",
+      "source": {
+        "url": "https://github.com/Azure-Samples/document-intelligence-code-samples/blob/8ac994c2712f3104d00ca4224b0ded6fd1ecbf70/Data/invoice/sample-invoice.pdf",
+        "download_url": "https://raw.githubusercontent.com/Azure-Samples/document-intelligence-code-samples/8ac994c2712f3104d00ca4224b0ded6fd1ecbf70/Data/invoice/sample-invoice.pdf",
+        "license": "MIT",
+        "license_url": "https://github.com/Azure-Samples/document-intelligence-code-samples/blob/8ac994c2712f3104d00ca4224b0ded6fd1ecbf70/LICENSE.md",
+        "retrieved_at": "2026-09-07",
+        "revision": "8ac994c2712f3104d00ca4224b0ded6fd1ecbf70"
+      },
+      "reference_text": null,
+      "expected_fields": {
+        "invoice_number": "INV-100",
+        "invoice_date": "2019-11-15",
+        "due_date": "2019-12-15",
+        "supplier": "CONTOSO LTD.",
+        "buyer": "MICROSOFT CORPORATION",
+        "subtotal": "100.00",
+        "tax_amount": "10.00",
+        "total_amount": "110.00",
+        "previous_unpaid_balance": "500.00",
+        "total_due": "610.00",
+        "purchase_order_number": "PO-3333",
+        "description": "Test for 23 fields"
+      },
+      "expected_text_values": {
+        "invoice_number": "INV-100",
+        "invoice_date": "11/15/2019",
+        "due_date": "12/15/2019",
+        "supplier": "CONTOSO LTD.",
+        "buyer": "MICROSOFT CORPORATION",
+        "subtotal": "100.00",
+        "tax_amount": "10.00",
+        "total_amount": "110.00",
+        "previous_unpaid_balance": "500.00",
+        "total_due": "610.00",
+        "purchase_order_number": "PO-3333",
+        "description": "Test for 23 fields"
+      },
+      "family": "azure-contoso-invoice",
+      "ground_truth_method": "Human visual inspection of original JPG / rendered PDF; second reviewer checked JPG business field associations.",
+      "notes": "Microsoft published sample, not a customer invoice. Total 110 differs from previous balance 500 and total due 610. Printed unit price 1 is internally inconsistent with line total 100; do not silently correct it.",
+      "page": 1
+    },
+    {
+      "id": "expressexpense-srd-1078",
+      "category": "receipt",
+      "language": "en-US",
+      "split": "challenge",
+      "file": "fixtures/1078-receipt.jpg",
+      "storage": "repository",
+      "sha256": "734d3f3e9b98156db85404855a4db603183e7db4c4338fd6415570ecdac1bd27",
+      "source": {
+        "url": "https://expressexpense.com/blog/free-receipt-images-ocr-machine-learning-dataset/",
+        "download_url": "https://expressexpense.com/large-receipt-image-dataset-SRD.zip",
+        "license": "MIT",
+        "license_url": "https://expressexpense.com/blog/free-receipt-images-ocr-machine-learning-dataset/",
+        "retrieved_at": "2026-09-07",
+        "archive_member": "1078-receipt.jpg",
+        "attribution": "ExpressExpense.com"
+      },
+      "reference_text": null,
+      "expected_fields": {
+        "merchant_name": "Tay Ho Oakland",
+        "receipt_number": "142750",
+        "date": "2019-02-19",
+        "subtotal": "12.95",
+        "tax_amount": "1.23",
+        "total_amount": "14.18",
+        "currency_symbol": "$"
+      },
+      "expected_text_values": {
+        "merchant_name": "Tay Ho Oakland",
+        "receipt_number": "142750",
+        "date": "2/19/19",
+        "subtotal": "12.95",
+        "tax_amount": "1.23",
+        "total_amount": "14.18",
+        "currency_symbol": "$"
+      },
+      "family": "expressexpense-srd-1078",
+      "ground_truth_method": "Human visual inspection of the downloaded original; no OCR model used. Partial key-field ground truth only; not suitable for full CER scoring.",
+      "notes": "Original photograph. Partially unreadable/cropped text: full reference intentionally null; score only confirmed fields. Merchant public information retained; no visible personal/card data found."
+    },
+    {
+      "id": "expressexpense-srd-1197",
+      "category": "receipt",
+      "language": "it-IT",
+      "split": "challenge",
+      "file": "fixtures/1197-receipt.jpg",
+      "storage": "repository",
+      "sha256": "69eef99677e60ff9dce6b34026b6d15a02c27034dab6b13ef42612fbc2670c2a",
+      "source": {
+        "url": "https://expressexpense.com/blog/free-receipt-images-ocr-machine-learning-dataset/",
+        "download_url": "https://expressexpense.com/large-receipt-image-dataset-SRD.zip",
+        "license": "MIT",
+        "license_url": "https://expressexpense.com/blog/free-receipt-images-ocr-machine-learning-dataset/",
+        "retrieved_at": "2026-09-07",
+        "archive_member": "1197-receipt.jpg",
+        "attribution": "ExpressExpense.com"
+      },
+      "reference_text": null,
+      "expected_fields": {
+        "merchant_name": "SAN MONTANO S.R.L.",
+        "receipt_number": "52",
+        "date": "2018-08-28",
+        "total_amount": "34.00",
+        "currency_text": "EURO",
+        "currency_symbol": "€"
+      },
+      "expected_text_values": {
+        "merchant_name": "SAN MONTANO S.R.L.",
+        "receipt_number": "52",
+        "date": "28-08-2018",
+        "total_amount": "34,00",
+        "currency_text": "EURO",
+        "currency_symbol": "€"
+      },
+      "family": "expressexpense-srd-1197",
+      "ground_truth_method": "Human visual inspection of the downloaded original; no OCR model used. Partial key-field ground truth only; not suitable for full CER scoring.",
+      "notes": "Original photograph. Partially unreadable/cropped text: full reference intentionally null; score only confirmed fields. Merchant public information retained; no visible personal/card data found."
+    },
+    {
+      "id": "uk-contract-payment-p25",
+      "category": "contract",
+      "language": "en-GB",
+      "split": "challenge",
+      "file": "uk-model-services-2025.pdf",
+      "storage": "cache",
+      "sha256": "00f37dbba296eb4f3db214f24cc7f8a478ebe48ab494669e0c494e98424c1f3d",
+      "source": {
+        "url": "https://www.gov.uk/government/publications/model-services-contract-terms",
+        "download_url": "https://assets.publishing.service.gov.uk/media/6953ae6897f1c5e3c92a8322/MHCLG__Model_Services_Contract_Terms_and_Conditions.pdf",
+        "license": "OGL-UK-3.0 (information; excluded logos not licensed)",
+        "license_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+        "retrieved_at": "2026-09-07",
+        "attribution": "Contains public sector information licensed under the Open Government Licence v3.0."
+      },
+      "reference_text": "Model Services Contract Core Terms\nMinistry of Housing,\nCommunities &\nLocal Government\n\n\n\n\nSection C: Payment, Taxation and Value\nfor Money Provisions\n\n10.     Financial and Taxation Matters\nCharges and Invoicing\n10.1    In consideration of the Supplier carrying out its obligations under this Contract, including\n        the provision of the Services, the Authority shall pay the Charges to the Supplier in\n        accordance with the pricing and payment profile and the invoicing procedure specified in\n        Schedule 11 (Charges and Invoicing).\n10.2    Except as otherwise provided, each Party shall each bear its own costs and expenses\n        incurred in respect of compliance with its obligations under Clauses 6.7 (Testing and\n        Achievement of Milestones), 12 (Records, Reports, Audits and Open Book Data), 20\n        (Transparency and Freedom of Information), 21 (Protection of Personal Data) and, to the\n        extent specified therein, Clause 27 (Remedial Adviser) and Clause 28 (Step-In Rights).\n10.3    If the Authority fails to pay any undisputed Charges properly invoiced under this Contract,\n        the Supplier shall have the right to charge interest on the overdue amount at the\n        applicable rate under the Late Payment of Commercial Debts (Interest) Act 1998,\n        accruing on a daily basis from the due date up to the date of actual payment, whether\n        before or after judgment.\n10.4    For the avoidance of doubt, the Charges represent all of the charges that can be levied\n        by the Supplier in respect of the provision of the Services in accordance with this\n        Contract, and the Supplier shall, at no additional cost to the Authority, be responsible for\n        providing any services, functions and responsibilities that are both necessary for and\n        incidental to the proper performance by the Supplier of the Services, unless there is an\n        express right for the Supplier to vary or levy additional charges.\n10.5    The Charges represent all of the charges that can be levied by the Supplier in respect of\n        the provision of the Services in accordance with this Contract, and the Supplier shall, at\n        no additional cost to the Authority, be responsible for providing any services, functions\n        and responsibilities that are both necessary for and incidental to the proper performance\n        by the Supplier of the Services, unless there is an express right for the Supplier to vary or\n        levy additional charges.\nVAT\n10.6    The Charges are stated exclusive of VAT, which shall be added at the prevailing rate as\n        applicable and paid by the Authority following delivery of a valid VAT invoice.\n10.7    The Supplier shall indemnify the Authority on a continuing basis against any liability,\n        including any interest, penalties or costs incurred, that is levied, demanded or assessed\n        on the Authority at any time in respect of the Supplier's failure to account for or to pay\n        any VAT relating to payments made to the Supplier under this Contract. Any amounts\n        due under this Clause 10.7 shall be paid in cleared funds by the Supplier to the Authority\n        not less than five Working Days before the date upon which the tax or other liability is\n        payable by the Authority.\n\n\n                                                 25\nMHCLG TCMSC 11.25",
+      "expected_fields": {
+        "section_number": "10",
+        "section_title": "Financial and Taxation Matters",
+        "payment_schedule_reference": "Schedule 11",
+        "late_payment_law": "Late Payment of Commercial Debts (Interest) Act 1998",
+        "vat_indemnity_notice_days": 5,
+        "vat_rate": null,
+        "total_amount": null
+      },
+      "page": 25,
+      "expected_text_values": {
+        "section_number": "10",
+        "section_title": "Financial and Taxation Matters",
+        "payment_schedule_reference": "Schedule 11",
+        "late_payment_law": "Late Payment of Commercial Debts (Interest) Act 1998",
+        "vat_indemnity_notice_days": "five Working Days"
+      },
+      "family": "uk-model-services-2025",
+      "ground_truth_method": "PDF text layer visually compared to rendered page; visible departmental logo text added manually. Reading order defined as header/logo then body then page footer.",
+      "notes": "84-page blank model contract; only page 25 rendered for this case. Dense clauses, legal citations and missing numeric VAT/total. Evaluates extraction, not legal correctness. Public candidate excludes the full PDF because OGL excludes logos; operator-controlled download only."
+    },
+    {
+      "id": "cn-contract-blank-p6",
+      "category": "contract",
+      "language": "zh-CN",
+      "split": "challenge",
+      "file": "cn-property-contract.pdf",
+      "storage": "cache",
+      "page": 6,
+      "sha256": "3d10a81c12e733f56ba05ecf34869895bce86932275ab487020a432c68fbac02",
+      "source": {
+        "url": "https://scjg.linxia.gov.cn/scjg/zfxxgk/fdzdgknr/zdlyxxgk/XFWQ/htwbk/art/2022/art_628cbdd912a9450daa699af20d407ec9.html",
+        "download_url": "https://scjg.linxia.gov.cn/cms_files/filemanager/1674915540/attach/202211/6259590c71a143638f5d5c205e8a9277.pdf",
+        "license": "No explicit open redistribution license; local download only",
+        "license_url": "https://scjg.linxia.gov.cn/scjg/zfxxgk/fdzdgknr/zdlyxxgk/XFWQ/htwbk/art/2022/art_628cbdd912a9450daa699af20d407ec9.html",
+        "retrieved_at": "2026-09-07"
+      },
+      "reference_text": null,
+      "expected_fields": {
+        "chapter_title": "商品房基本状况",
+        "article_one_title": "项目建设依据",
+        "article_two_title": "销售依据",
+        "article_three_title": "商品房基本情况",
+        "construction_land_area": null,
+        "land_use_expiry_date": null,
+        "property_total_area": null
+      },
+      "expected_text_values": {
+        "chapter_title": "商品房基本状况",
+        "article_one_title": "项目建设依据",
+        "article_two_title": "销售依据",
+        "article_three_title": "商品房基本情况"
+      },
+      "family": "cn-property-contract-2014",
+      "ground_truth_method": "Human visual inspection of rendered page; only confirmed headings and explicitly blank fields annotated.",
+      "notes": "Historical blank government template used only as OCR material. PDF and rendered pages remain outside repository. Unknown values and unselected payment options must stay null; no legal assessment."
+    },
+    {
+      "id": "cn-contract-blank-p8",
+      "category": "contract",
+      "language": "zh-CN",
+      "split": "challenge",
+      "file": "cn-property-contract.pdf",
+      "storage": "cache",
+      "page": 8,
+      "sha256": "3d10a81c12e733f56ba05ecf34869895bce86932275ab487020a432c68fbac02",
+      "source": {
+        "url": "https://scjg.linxia.gov.cn/scjg/zfxxgk/fdzdgknr/zdlyxxgk/XFWQ/htwbk/art/2022/art_628cbdd912a9450daa699af20d407ec9.html",
+        "download_url": "https://scjg.linxia.gov.cn/cms_files/filemanager/1674915540/attach/202211/6259590c71a143638f5d5c205e8a9277.pdf",
+        "license": "No explicit open redistribution license; local download only",
+        "license_url": "https://scjg.linxia.gov.cn/scjg/zfxxgk/fdzdgknr/zdlyxxgk/XFWQ/htwbk/art/2022/art_628cbdd912a9450daa699af20d407ec9.html",
+        "retrieved_at": "2026-09-07"
+      },
+      "reference_text": null,
+      "expected_fields": {
+        "payment_clause_title": "付款方式及期限",
+        "late_payment_clause_title": "逾期付款责任",
+        "total_amount": null,
+        "deposit_amount": null,
+        "payment_method_selected": null,
+        "payment_due_date": null,
+        "bank_account_number": null
+      },
+      "expected_text_values": {
+        "payment_clause_title": "付款方式及期限",
+        "late_payment_clause_title": "逾期付款责任"
+      },
+      "family": "cn-property-contract-2014",
+      "ground_truth_method": "Human visual inspection of rendered page; only confirmed headings and explicitly blank fields annotated.",
+      "notes": "Historical blank government template used only as OCR material. PDF and rendered pages remain outside repository. Unknown values and unselected payment options must stay null; no legal assessment."
+    }
+  ]
+}

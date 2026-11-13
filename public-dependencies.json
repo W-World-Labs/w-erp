@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "rust_public_pins": {
+    "https://github.com/W-World-Labs/w-commons": "f7eb2a85af8409340d094807c22ab7f24cf50913",
+    "https://github.com/W-World-Labs/w-radar": "579174832c5de9a1b606f82084171b3965deae56"
+  },
+  "vendored_js": [
+    {
+      "destination": "vendor/w-http-web/.gitignore",
+      "source": "sdk/js/http-web/.gitignore",
+      "source_sha256": "ba79bbc25fa8951489e77f28f1561c2e9388115cb33f1c606424f8e08169f96b",
+      "final_sha256": "ba79bbc25fa8951489e77f28f1561c2e9388115cb33f1c606424f8e08169f96b"
+    },
+    {
+      "destination": "vendor/w-http-web/README.md",
+      "source": "sdk/js/http-web/README.md",
+      "source_sha256": "c7b4b3fdd872063201012f1ed3da9fb2d71c72d14087517852e836bec26dfa69",
+      "final_sha256": "c7b4b3fdd872063201012f1ed3da9fb2d71c72d14087517852e836bec26dfa69"
+    },
+    {
+      "destination": "vendor/w-http-web/dist/cjs/index.js",
+      "source": "sdk/js/http-web/dist/cjs/index.js",
+      "source_sha256": "e80484f45a22047bef17e51ed46ee9acfe3bce8cb059ef1384507a5698e17892",
+      "final_sha256": "e80484f45a22047bef17e51ed46ee9acfe3bce8cb059ef1384507a5698e17892"
+    },
+    {
+      "destination": "vendor/w-http-web/dist/cjs/package.json",
+      "source": "sdk/js/http-web/dist/cjs/package.json",
+      "source_sha256": "8005a3491db7d92f36ac66369861589f9c47123d3a7c71e643fc2c06168cd45a",
+      "final_sha256": "8005a3491db7d92f36ac66369861589f9c47123d3a7c71e643fc2c06168cd45a"
+    },
+    {
+      "destination": "vendor/w-http-web/dist/esm/index.js",
+      "source": "sdk/js/http-web/dist/esm/index.js",
+      "source_sha256": "6f56b917e10361b9a8b3f62cd52d44d4833b76e7f64e52bdd6b2fa1055e62a24",
+      "final_sha256": "6f56b917e10361b9a8b3f62cd52d44d4833b76e7f64e52bdd6b2fa1055e62a24"
+    },
+    {
+      "destination": "vendor/w-http-web/dist/esm/package.json",
+      "source": "sdk/js/http-web/dist/esm/package.json",
+      "source_sha256": "3ca9d4afd21425087cf31893b8f9f63c81b0b8408db5e343ca76e5f8aa26ab9a",
+      "final_sha256": "3ca9d4afd21425087cf31893b8f9f63c81b0b8408db5e343ca76e5f8aa26ab9a"
+    },
+    {
+      "destination": "vendor/w-http-web/dist/types/index.d.ts",
+      "source": "sdk/js/http-web/dist/types/index.d.ts",
+      "source_sha256": "b926f5a35ebabf9a1ab88835ff638c250ccb5b14dfe638ea726782e1b90d3874",
+      "final_sha256": "b926f5a35ebabf9a1ab88835ff638c250ccb5b14dfe638ea726782e1b90d3874"
+    },
+    {
+      "destination": "vendor/w-http-web/package.json",
+      "source": "sdk/js/http-web/package.json",
+      "source_sha256": "ec8690b8761cbf10ca2f23e8f98346bb3f07116ec9a2b73ac32ad97c4508a224",
+      "final_sha256": "5f70e456b56f278159bffc0fa48d884820835d2a02f1672f370aefe9b24f1742"
+    },
+    {
+      "destination": "vendor/w-http-web/scripts/fixup.mjs",
+      "source": "sdk/js/http-web/scripts/fixup.mjs",
+      "source_sha256": "4abf0cc67aa3ae306ef78e47bc862549d464bdb407364122777042e3573b1f4e",
+      "final_sha256": "4abf0cc67aa3ae306ef78e47bc862549d464bdb407364122777042e3573b1f4e"
+    },
+    {
+      "destination": "vendor/w-http-web/src/index.ts",
+      "source": "sdk/js/http-web/src/index.ts",
+      "source_sha256": "82f2997037756e82a23761f888308f1752917cbd29cb6753c4239e5671805396",
+      "final_sha256": "82f2997037756e82a23761f888308f1752917cbd29cb6753c4239e5671805396"
+    },
+    {
+      "destination": "vendor/w-http-web/tsconfig.base.json",
+      "source": "sdk/js/http-web/tsconfig.base.json",
+      "source_sha256": "c511550f709184c07f457ac219b1379e7e941ad226542e93011078c73a3fc05f",
+      "final_sha256": "c511550f709184c07f457ac219b1379e7e941ad226542e93011078c73a3fc05f"
+    },
+    {
+      "destination": "vendor/w-http-web/tsconfig.cjs.json",
+      "source": "sdk/js/http-web/tsconfig.cjs.json",
+      "source_sha256": "41fd72e064f69597a8360e45d23cc86e86e53bfb39c0606a12ec3f342fc38d85",
+      "final_sha256": "41fd72e064f69597a8360e45d23cc86e86e53bfb39c0606a12ec3f342fc38d85"
+    },
+    {
+      "destination": "vendor/w-http-web/tsconfig.esm.json",
+      "source": "sdk/js/http-web/tsconfig.esm.json",
+      "source_sha256": "ebac49ff988e53668bc55a4226e53d68fd5086c543b8dd24b2f52ee01ae75ee1",
+      "final_sha256": "ebac49ff988e53668bc55a4226e53d68fd5086c543b8dd24b2f52ee01ae75ee1"
+    },
+    {
+      "destination": "vendor/xradar-js/package.json",
+      "source": "sdk/js/xradar/package.json",
+      "source_sha256": "086c0c4af2a59034cc9a14640ffa5d19e4edb6f93bc161e1ac00e9f47cc1e3b9",
+      "final_sha256": "450feebee175d9876f61251b23bf726261528e840e834c8870ce0058cc6da7ed"
+    },
+    {
+      "destination": "vendor/xradar-js/src/index.d.ts",
+      "source": "sdk/js/xradar/src/index.d.ts",
+      "source_sha256": "7ab1baf75bf2b0036e15f450b886f1b1f0d0693ac433ffd1a010c951314b65eb",
+      "final_sha256": "7ab1baf75bf2b0036e15f450b886f1b1f0d0693ac433ffd1a010c951314b65eb"
+    },
+    {
+      "destination": "vendor/xradar-js/src/index.js",
+      "source": "sdk/js/xradar/src/index.js",
+      "source_sha256": "37e197be01eb05a19ac0fcc769a70f79fed2bbdd90738ea8ca327ce37d4e9d8a",
+      "final_sha256": "37e197be01eb05a19ac0fcc769a70f79fed2bbdd90738ea8ca327ce37d4e9d8a"
+    },
+    {
+      "destination": "vendor/xradar-js/src/profiling.d.ts",
+      "source": "sdk/js/xradar/src/profiling.d.ts",
+      "source_sha256": "e62bca77aadb2e96f46885630cfc9c12a518f1df635427ba34398a0a448b7112",
+      "final_sha256": "e62bca77aadb2e96f46885630cfc9c12a518f1df635427ba34398a0a448b7112"
+    },
+    {
+      "destination": "vendor/xradar-js/src/profiling.js",
+      "source": "sdk/js/xradar/src/profiling.js",
+      "source_sha256": "5788f9dd4d66b5c00a85f630ff05d0383e7b6449de6ee82741a85686a2ff795d",
+      "final_sha256": "5788f9dd4d66b5c00a85f630ff05d0383e7b6449de6ee82741a85686a2ff795d"
+    }
+  ],
+  "lockfiles": {
+    "npm": "Static file-dependency/source rewrite only; npm ci was not run",
+    "cargo": "Generated from public Git pins and the public crates.io sparse index using cargo generate-lockfile; metadata resolution only, no registry package archives or builds"
+  },
+  "validation": "Static exported API review and Cargo dependency metadata resolution only; npm local-file lock was rewritten statically; no package installation, builds, tests or CI",
+  "pending": [
+    "Commons pin currently references the public source snapshot; coordinator final public-root pin remains pending",
+    "npm ci lock acceptance, dependency license closure, vulnerability review and application build/functional acceptance remain pending"
+  ]
+}

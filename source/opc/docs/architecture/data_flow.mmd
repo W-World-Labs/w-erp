@@ -1,0 +1,39 @@
+sequenceDiagram
+    participant U as 用户 (前端)
+    participant API as Axum API
+    participant Auth as Auth 中间件
+    participant DB as SQLite
+    participant AI as AI 服务
+    participant OCR as Ollama / PaddleOCR
+
+    Note over U,OCR: 合同创建 + AI 自动审查
+
+    U->>API: POST /api/contracts {contract_name, content, counterparty_type}
+    API->>Auth: require_auth (验证 session_token)
+    Auth-->>API: AuthUser {user_id, company_id}
+    API->>DB: INSERT INTO contracts VALUES (...)
+    DB-->>API: contract_id
+
+    API-->>U: 200 OK {id: contract_id}
+
+    Note over API,AI: 异步后台审查 (不阻塞用户)
+
+    API->>DB: UPDATE contracts SET ai_review_status = 'reviewing'
+    API->>AI: POST /v1/chat/completions {合同内容 + 审查 prompt}
+    AI-->>API: {review: "...", risk_level: "🔴 high"}
+    API->>DB: UPDATE contracts SET ai_risk_level, ai_review_result, ai_reviewed_at
+
+    Note over U,OCR: OCR 文档识别
+
+    U->>API: POST /api/ai/parse-document {file_base64, document_type}
+    API->>OCR: POST /api/generate {model: paddleocr-vl:1.5, images: [...]}
+    OCR-->>API: 结构化字段 JSON
+    API-->>U: {fields: {title, amount, date, ...}}
+
+    Note over U,OCR: 政策智能匹配
+
+    U->>API: GET /api/v1/policies/match
+    API->>DB: SELECT company profile (country, revenue, employees, founder)
+    API->>DB: SELECT all policies
+    API-->>API: 计算匹配分数 (country +40, education +15, returnee +15)
+    API-->>U: [{policy, match_score, reasons}]

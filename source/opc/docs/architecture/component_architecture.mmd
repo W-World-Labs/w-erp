@@ -1,0 +1,60 @@
+graph TD
+    subgraph Pages ["页面层"]
+        Dashboard["Dashboard<br/>仪表盘"]
+        Contracts["Contracts<br/>合同管理"]
+        Invoices["Invoices<br/>发票管理"]
+        Assets["Assets<br/>资产管理"]
+        Employees["Employees<br/>员工管理"]
+        Policies["Policies<br/>政策智能"]
+        OPC["OPCSandbox<br/>OPC出海"]
+        CloudCost["CloudCost<br/>云成本"]
+    end
+
+    subgraph Components ["组件层"]
+        ContractDialog["ContractDialog<br/>合同表单"]
+        AIAuditDialog["AIAuditDialog<br/>AI审查"]
+        AutoParseBtn["AutoParseButton<br/>OCR识别"]
+        StatCards["StatCards<br/>统计卡片"]
+        DataTable["DataTable<br/>数据表格"]
+    end
+
+    subgraph Hooks ["Hook 层"]
+        useQuery["useQuery<br/>数据获取"]
+        useMutation["useMutation<br/>数据变更"]
+        useDocParser["useDocumentParser<br/>OCR解析"]
+        useAuth["useAuth<br/>认证状态"]
+    end
+
+    subgraph API ["API 层"]
+        APIClient["api.ts<br/>REST 客户端"]
+    end
+
+    subgraph Backend ["后端 (Rust)"]
+        AuthMW["require_auth"]
+        GenericCRUD["generic.rs"]
+        AIEngine["ai.rs"]
+    end
+
+    Contracts --> ContractDialog
+    Contracts --> AIAuditDialog
+    Contracts --> StatCards
+    Contracts --> DataTable
+    ContractDialog --> AutoParseBtn
+    ContractDialog --> useDocParser
+
+    Pages --> useQuery
+    Pages --> useMutation
+    Pages --> useAuth
+    useQuery --> APIClient
+    useMutation --> APIClient
+    useDocParser --> APIClient
+
+    APIClient -->|"Bearer Token"| AuthMW
+    AuthMW --> GenericCRUD
+    AuthMW --> AIEngine
+
+    style Pages fill:#1e293b,stroke:#3b82f6,color:#f8fafc
+    style Components fill:#1e293b,stroke:#10b981,color:#f8fafc
+    style Hooks fill:#1e293b,stroke:#f59e0b,color:#f8fafc
+    style API fill:#1e293b,stroke:#ef4444,color:#f8fafc
+    style Backend fill:#1e293b,stroke:#a855f7,color:#f8fafc

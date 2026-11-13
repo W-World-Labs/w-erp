@@ -1,0 +1,19 @@
+{
+  "name": "@w/xradar",
+  "version": "0.2.1",
+  "type": "module",
+  "description": "xRadar client SDK for Radar telemetry",
+  "license": "MIT",
+  "sideEffects": false,
+  "main": "./src/index.js",
+  "types": "./src/index.d.ts",
+  "files": [
+    "src"
+  ],
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "default": "./src/index.js"
+    }
+  }
+}

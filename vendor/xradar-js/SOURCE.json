@@ -1,0 +1,9 @@
+{
+  "repository": "https://github.com/W-World-Labs/w-radar",
+  "commit": "579174832c5de9a1b606f82084171b3965deae56",
+  "source_directory": "sdk/js/xradar/",
+  "scope": "Public SDK only; no Radar service or consumer business code",
+  "modifications": [
+    "package.json scripts and development dependencies removed; runtime entrypoints unchanged"
+  ]
+}

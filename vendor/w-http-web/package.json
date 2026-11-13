@@ -1,0 +1,22 @@
+{
+  "name": "@w/http-web",
+  "version": "0.1.0",
+  "description": "Pure-TypeScript frontend HTTP client superset (JS twin of the fleet's hand-rolled fetch wrappers): a configurable fetchJSON<T> + a rich ApiError. Every consumer's request shape + error behaviour is reproducible via injected baseUrl/token/unwrap/onUnauthorized/onError/span callbacks. Zero runtime deps, tree-shakeable ESM+CJS.",
+  "license": "MIT",
+  "sideEffects": false,
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/types/index.d.ts",
+  "files": [
+    "dist",
+    "src",
+    "README.md"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js"
+    }
+  }
+}

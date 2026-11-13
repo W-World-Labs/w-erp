@@ -1,0 +1,56 @@
+graph TD
+    subgraph Frontend ["前端 (React 18 + TypeScript)"]
+        UI[/"shadcn/ui 组件集"/]
+        Pages["页面模块"]
+        APIClient["API Client"]
+        RHF["React Hook Form + Zod"]
+        TQ["TanStack Query"]
+    end
+
+    subgraph Backend ["后端 (Rust / Axum 0.8)"]
+        Auth["Auth 中间件<br/>require_auth"]
+        GenericCRUD["通用 CRUD 引擎<br/>generic.rs (40+ 表)"]
+        DedicatedAPI["专用 API 模块<br/>assets / invoices / employees"]
+        AIEngine["AI 审查引擎<br/>ai.rs"]
+        PolicyEngine["政策智能<br/>policies.rs"]
+        OPCEngine["OPC 沙盘<br/>global_opc_hubs.rs"]
+        FileService["文件管理<br/>files.rs"]
+    end
+
+    subgraph Data ["数据层"]
+        SQLite[("SQLite<br/>schema.rs<br/>50+ 表")]
+        FileStore[("文件存储<br/>uploads/")]
+    end
+
+    subgraph AI ["AI 服务"]
+        Ollama["Ollama<br/>PaddleOCR-VL 1.5 (0.9B)"]
+        LLMAPI["OpenAI 兼容 API<br/>GLM-4 / Qwen / DeepSeek"]
+    end
+
+    UI --> Pages
+    Pages --> RHF
+    RHF --> APIClient
+    Pages --> TQ
+    TQ --> APIClient
+    APIClient -->|REST JSON| Auth
+
+    Auth --> GenericCRUD
+    Auth --> DedicatedAPI
+    Auth --> AIEngine
+    Auth --> PolicyEngine
+    Auth --> OPCEngine
+    Auth --> FileService
+
+    GenericCRUD -->|"自动审查<br/>tokio::spawn"| LLMAPI
+    GenericCRUD --> SQLite
+    DedicatedAPI --> SQLite
+    AIEngine --> Ollama
+    AIEngine --> LLMAPI
+    PolicyEngine --> SQLite
+    OPCEngine --> SQLite
+    FileService --> FileStore
+
+    style Frontend fill:#1e293b,stroke:#3b82f6,color:#f8fafc
+    style Backend fill:#1e293b,stroke:#10b981,color:#f8fafc
+    style Data fill:#1e293b,stroke:#f59e0b,color:#f8fafc
+    style AI fill:#1e293b,stroke:#a855f7,color:#f8fafc
